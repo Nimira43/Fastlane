@@ -2,17 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
 
 :root {
-    --prime-col: darkblue;
-    --second-col: darkcyan;
-    --light-col: #ddd;
+    --prime-col: #00008b;
+    --second-col: #008b8b;
+    --light-col-1: #ddd;
+    --light-col-2: #eee;
     --dark-col: #222;
+    --yellow-col: #ffff00;
     --max-width: 1100px;
 }
 
 .category {
-    --mcl-col: darkorange;
-    --fer-col: darkred;
-    --ast-col: darkgreen;
+    --mcl-col: #ff8c00;
+    --fer-col: #8b0000;
+    --ast-col: #006400;
+    --rbl-col: #0000ff;
 }
 
 * {
@@ -24,7 +27,7 @@
 body {
     font-family: 'Raleway', sans-serif;
     line-height: 1.5;
-    background: var(--light-col);    
+    background: var(--light-col-1);    
 }
 
 a {
@@ -53,8 +56,71 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
+.category {
+    display: inline-block;
+    color: var(--light-col-2);
+    font-size: 0.65rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.4rem 0.6rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
+
+.category-mcl {
+    background: var(--mcl-col);
+    color: var(--dark-col);
+}
+
+.category-fer {
+    background: var(--fer-col);
+    color: var(--yellow-col);
+}
+
+.category-ast {
+    background: var(--ast-col);
+    color: var(--yellow-col);
+}
+
+.category-rbl {
+    background: var(--rbl-col);
+    color: var(--yellow-col);
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    background: var(--dark-col);
+    color: var(--light-col-2);
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-light {
+    background: var(--light-col-2);
+    color: var(--prime-col);
+}
+
+.btn-primary {
+    background: var(--prime-col);
+}
+
+.btn-secondary {
+    background: var(--second-col);
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
 #main-nav {
-    background: #eee;
+    background: var(--light-col-2);
     position: sticky;
     top: 0;
     z-index: 2;
@@ -111,3 +177,39 @@ h1, h2, h3, h4, h5, h6 {
 #main-nav .social i:hover {
     color: var(--second-col);
 }
+
+#showcase {
+    color: var(--light-col-2);
+    background-color: var(--dark-col);
+    padding: 2rem;
+    position: relative;
+}
+
+#showcase:before {
+    content: '';
+    background: url('./images/mclaren.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+#showcase .showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 50vw;
+}
+
+#showcase .showcase-content {
+    z-index: 1;
+}
+
+#showcase .showcase-content p {
+    margin-bottom: 1rem;
+}
+
+
