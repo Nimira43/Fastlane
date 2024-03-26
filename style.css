@@ -7,7 +7,11 @@
     --light-col-1: #ddd;
     --light-col-2: #eee;
     --dark-col: #222;
-    --yellow-col: #ffff00;
+    --yellow-col: #e3ea10;
+    --turquoise-col: turquoise;
+    --pink-col: pink;
+    --white-col: #fff;
+    --black-col: #000;
     --max-width: 1100px;
 }
 
@@ -16,6 +20,12 @@
     --fer-col: #8b0000;
     --ast-col: #006400;
     --rbl-col: #0000ff;
+    --rbv-col: #3c3cfe;
+    --mer-col: #000000;
+    --wil-col: #2727c3;
+    --sau-col: #00ff00;
+    --haa-col: #ff0000;
+    --alp-col: #1515ff;
 }
 
 * {
@@ -87,6 +97,36 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--yellow-col);
 }
 
+.category-rbv {
+    background: var(--rbv-col);
+    color: var(--white-col);
+}
+
+.category-mer {
+    background: var(--mer-col);
+    color: var(--turquoise-col);
+}
+
+.category-wil {
+    background: var(--wil-col);
+    color: var(--white-col);
+}
+
+.category-sau {
+    background: var(--sau-col);
+    color: var(--black-col);
+}
+
+.category-haa {
+    background: var(--haa-col);
+    color: var(--white-col);
+}
+
+.category-alp {
+    background: var(--alp-col);
+    color: var(--pink-col);
+}
+
 .btn {
     display: inline-block;
     border: none;
@@ -109,14 +149,19 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--second-col);
 }
 
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;  
+}
+
 .btn:hover {
     opacity: 0.8;
 }
 
-.btn-block {
-    display: block;
-    width: 100%;
-    text-align: center;
+.card {
+    background: var(--light-col-2);
+    padding: 1rem;
 }
 
 #main-nav {
@@ -124,6 +169,60 @@ h1, h2, h3, h4, h5, h6 {
     position: sticky;
     top: 0;
     z-index: 2;
+}
+
+.bg-dark {
+    background: var(--dark-col);
+    color: var(--light-col-2);
+}
+
+.bg-primary {
+    background: var(--prime-col);
+    color: var(--light-col-2);
+}
+
+.bg-secondary {
+    background: var(--second-col);
+    color: var(--light-col-2);
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a {
+    color: var(--light-col-2);
+}
+
+.py-1 {
+    padding: 1.5rem 0;
+}
+
+.py-2 {
+    padding: 2rem 0;
+}
+
+.py-3 {
+    padding: 3rem 0;
+}
+
+.p-1 {
+    padding: 1.5rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.p-3 {
+    padding: 3rem;
 }
 
 #main-nav .container {
@@ -212,4 +311,21 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
+#home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
 
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    grid-column: 1 / span 2;
+}
+
+#home-articles .articles-container>*:last-child {
+    grid-column: 2 / span 2;
+}
