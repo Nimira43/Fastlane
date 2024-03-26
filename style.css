@@ -6,7 +6,7 @@
     --second-col: #008b8b;
     --light-col-1: #ddd;
     --light-col-2: #eee;
-    --dark-col: #222;
+    --dark-col: #111;
     --yellow-col: #e3ea10;
     --turquoise-col: turquoise;
     --pink-col: pink;
@@ -47,6 +47,10 @@ a {
 
 ul {
     list-style: none;
+}
+
+p {
+    padding: 0.5rem;
 }
 
 img {
@@ -169,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
     position: sticky;
     top: 0;
     z-index: 2;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .bg-dark {
@@ -226,6 +230,15 @@ h1, h2, h3, h4, h5, h6 {
     padding: 3rem;
 }
 
+.list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted var(--second-col);
+    width: 90%;
+}
+
+.list li a:hover {
+    color: var(--second-col) !important;
+}
 #main-nav .container {
     display: grid;
     grid-template-columns: 6fr 3fr 2fr;
@@ -329,4 +342,64 @@ h1, h2, h3, h4, h5, h6 {
 
 #home-articles .articles-container>*:last-child {
     grid-column: 2 / span 2;
+}
+
+#main-footer {
+    background: var(--dark-col);
+    color: var(--light-col-2);
+}
+
+#main-footer .logo {
+    width: 113px;
+    font-size: 20px;
+    font-family: 'McLaren', sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+    text-transform: lowercase;
+    text-shadow: 0.7px 0.7px 0 var(--second-col);
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--prime-col);
+    background-color: var(--light-col-1);
+    border: 2.5px solid var(--second-col);
+    border-radius: 13px;
+    box-shadow: inset 1.2px 1.2px 1.2px 1.2px var(--prime-col),
+        inset -1.2px 1.2px 1.2px 1.2px var(--prime-col);
+    /* margin-top: 2rem; */
+}
+
+#main-footer a {
+    color: var(--light-col-2);
+}
+
+#main-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
+
+#main-footer .footer-container > *:last-child {
+    grid-column: 1 / span 4;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+#main-footer .footer-container input[type='email'] {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: var(--light-col-2);
+    border: 2px solid var(--second-col);
+    border-radius: 5px;
+    color: var(--prime-col);
+    outline: none;
+}
+
+#main-footer .footer-container input[type='submit'] {
+    width: 90%;
+}
+
+#main-footer .footer-container input[type='email']::placeholder {
+    color: var(--second-col);
 }
