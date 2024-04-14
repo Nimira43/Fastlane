@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     text-transform: uppercase;
     padding: 0.4rem 0.6rem;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-bottom: 0.5rem;
 }
 
@@ -358,6 +358,20 @@ h1, h2, h3, h4, h5, h6 {
 
 #home-articles .articles-container>*:last-child {
     grid-column: 2 / span 2;
+}
+
+#article .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark-col);
+    color: var(--light-col-2);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+#article .meta .category {
+    margin-top: 0.4rem;
 }
 
 #main-footer {
